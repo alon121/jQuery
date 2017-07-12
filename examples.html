@@ -1,0 +1,96 @@
+to me 
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <style>
+            .req {
+                border:1px solid red;
+            }
+            span {
+                display: block;
+            }
+            </style>
+        <script>
+            $(document).ready(function() {
+                console.log(document.getElementById('myDiv'));
+    
+                $('#i1').blur(function() {
+                     if ($('#i1').val().length > 2)
+                        $('#i1').removeClass('req');
+                    else
+                        $('#i1').addClass('req');
+                });
+
+                 $('#aa').click(function(e) {
+                    e.preventDefault();
+                    console.log('s');
+
+                });
+
+                //$('#myDiv').hide(2000).show(2000).hide(2000).show(2000).hide(2000).show(2000);
+
+                $('div span').each(function(k,v) {
+                    let color = 'blue';
+                    if (k%2==0) {
+                        color ='red';
+                    }
+                    $(this).css('color', color);   
+                }); 
+
+            });
+            
+           
+            </script>
+        
+
+        <style>
+            .highlight {
+                background-color: yellow;
+            }
+
+            #myDiv {
+                width: 300px;
+                height: 300px;
+                margin:0 auto;
+            }
+            </style>
+    </head>
+    <body>
+            <div>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+                <span>xxxxxxxxxx</span>
+
+            </div>
+            <div class='my-class' id='myDiv' style='background-color: red;'> 
+                Hello there!
+                <a id='aa' href='http://localhost/jquery/'>Anchor</a>
+
+
+
+            </div>
+            <fieldset>
+                <legend>Inputs:</legend>
+                <label>First name
+                    <input id='i1'>
+                </label>
+                <input id='i2'>
+                <input id='i3'>
+              <button id='c'>Click</button>
+            </fieldset>
+            
+          
+
+            
+    </body>
+</html>
